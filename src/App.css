@@ -1,0 +1,267 @@
+#root {
+    width: 100%;
+  padding: 2.5rem 2rem 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e5e7eb;
+  background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 60%, #000 100%);
+  background-attachment: fixed;
+}
+
+.app {
+    margin: 0 auto;
+    max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.app-header {
+  text-align: left;
+  position: relative;
+}
+
+.app-header::before {
+  content: '';
+  position: absolute;
+  inset: -40px -80px auto auto;
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.app-header h1 span {
+  color: #38bdf8;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+}
+
+.subtitle {
+  margin: 0.25rem 0;
+  color: #cbd5f5;
+}
+
+.subtitle.small {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+.card {
+  background: radial-gradient(circle at top left, #020617, #020617 40%, #020617 60%, #000 100%);
+  border-radius: 1.4rem;
+  padding: 1.9rem 1.7rem 1.6rem;
+  box-shadow:
+    0 24px 55px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(148, 163, 184, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(
+    from 180deg,
+    rgba(56, 189, 248, 0.06),
+    transparent 30%,
+    transparent 70%,
+    rgba(129, 140, 248, 0.06)
+  );
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at top left, rgba(15, 23, 42, 0.8), transparent 55%);
+  pointer-events: none;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.field {
+  text-align: left;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.field-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field input {
+  flex: 1;
+  background: radial-gradient(circle at top, #020617, #020617 60%, #020617 80%, #000 100%);
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  color: #e5e7eb;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 0 1px #0f172a,
+    0 0 0 2px #38bdf8;
+}
+
+.suffix {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.field-help {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.result-section {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.result {
+  margin: 0.45rem 0;
+}
+
+.result.muted {
+  color: #9ca3af;
+}
+
+.result.error {
+  color: #fecaca;
+}
+
+.result.main-number {
+  font-size: 1.1rem;
+}
+
+.highlight {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin: 0.55rem 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 20px rgba(56, 189, 248, 0.7),
+    0 0 45px rgba(56, 189, 248, 0.9);
+}
+
+.inline-highlight {
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.result.detail {
+  color: #e5e7eb;
+}
+
+.result.nerdy {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.examples {
+  margin-top: 1.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.examples h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+}
+
+.examples ul {
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.examples li {
+  font-size: 0.93rem;
+}
+
+.example-btn {
+  margin-left: 0.25rem;
+  font-size: 0.8rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  background: radial-gradient(circle at top, #020617, #020617 70%, #000 100%);
+  color: #e5e7eb;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.example-btn:hover {
+  border-color: #38bdf8;
+  color: #f9fafb;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.55);
+}
+
+.footer {
+  margin-top: 1.7rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+  position: relative;
+  z-index: 1;
+}
+
+.footer a {
+  color: #38bdf8;
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding: 1.75rem 1.25rem 2.5rem;
+  }
+
+  .card {
+    padding: 1.45rem 1.2rem 1.3rem;
+  }
+
+  .app-header h1 {
+    font-size: 2.1rem;
+  }
+}
